@@ -21,24 +21,24 @@ import computeSimilarity from '../utils/computeSimilarity';
 import logger from '../utils/logger';
 
 const basicSearchRetrieverPrompt = `
-You will be given a conversation below and a follow up question. You need to rephrase the follow-up question if needed so it is a standalone question that can be used by the LLM to search the web for information.
-If it is a writing task or a simple hi, hello rather than a question, you need to return \`not_needed\` as the response.
+아래 대화와 후속 질문이 주어집니다. 필요한 경우 후속 질문이 독립된 질문이 되어 LLM이 웹에서 정보를 검색하는 데 사용할 수 있도록 다시 말해야 합니다.
+질문이 아닌 글쓰기 작업이나 간단한 인사말인 경우에는 응답으로 \`필요 없음\`을 반환해야 합니다.
 
-Example:
-1. Follow up question: What is the capital of France?
-Rephrased: Capital of france
+예시:
+1. 후속 질문: 프랑스의 수도는 어디인가요?
+검색 질의: 프랑스의 수도
 
-2. Follow up question: What is the population of New York City?
-Rephrased: Population of New York City
+2. 후속 질문: 뉴욕시의 인구는 얼마입니까?
+검색 질의: 뉴욕시의 인구
 
-3. Follow up question: What is Docker?
-Rephrased: What is Docker
+3. 후속 질문: 도커란 무엇인가요?
+검색 질의: 도커
 
-Conversation:
+대화:
 {chat_history}
 
-Follow up question: {query}
-Rephrased question:
+후속 질문: {query}
+검색 질의:
 `;
 
 const basicWebSearchResponsePrompt = `
@@ -61,6 +61,7 @@ const basicWebSearchResponsePrompt = `
 
     If you think there's nothing relevant in the search results, you can say that 'Hmm, sorry I could not find any relevant information on this topic. Would you like me to search again or ask something else?'.
     Anything between the \`context\` is retrieved from a search engine and is not a part of the conversation with the user. Today's date is ${new Date().toISOString()}
+Answer in KOREAN.
 `;
 
 const strParser = new StringOutputParser();
