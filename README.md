@@ -1,3 +1,15 @@
+# 실행법
+```
+## docker compose 실행을 위한 설치
+sh get-docker.sh
+
+## docker 기반 데모 실행
+sudo docker compose up -d --build
+
+## docker 기반 데모 내리기
+sudo docker compose down
+```
+
 # 🚀 Perplexica - An AI-powered search engine 🔎 <!-- omit in toc -->
 
 ![preview](.assets/perplexica-screenshot.png)
