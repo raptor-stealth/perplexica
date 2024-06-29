@@ -30,12 +30,12 @@ const focusModes = [
     description: 'Chat without searching the web',
     icon: <Pencil size={16} />,
   },
-  {
-    key: 'wolframAlphaSearch',
-    title: 'Wolfram Alpha',
-    description: 'Computational knowledge engine',
-    icon: <BadgePercent size={20} />,
-  },
+  // {
+  //   key: 'wolframAlphaSearch',
+  //   title: 'Wolfram Alpha',
+  //   description: 'Computational knowledge engine',
+  //   icon: <BadgePercent size={20} />,
+  // },
   {
     key: 'youtubeSearch',
     title: 'Youtube',

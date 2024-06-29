@@ -19,6 +19,11 @@ export const getAvailableChatModelProviders = async () => {
   if (openAIApiKey) {
     try {
       models['openai'] = {
+        'GPT-4 omni': new ChatOpenAI({
+          openAIApiKey,
+          modelName: 'gpt-4o',
+          temperature: 0.7,
+        }),
         'GPT-3.5 turbo': new ChatOpenAI({
           openAIApiKey,
           modelName: 'gpt-3.5-turbo',
@@ -34,11 +39,7 @@ export const getAvailableChatModelProviders = async () => {
           modelName: 'gpt-4-turbo',
           temperature: 0.7,
         }),
-        'GPT-4 omni': new ChatOpenAI({
-          openAIApiKey,
-          modelName: 'gpt-4o',
-          temperature: 0.7,
-        }),
+        
       };
     } catch (err) {
       logger.error(`Error loading OpenAI models: ${err}`);
@@ -131,14 +132,15 @@ export const getAvailableEmbeddingModelProviders = async () => {
   if (openAIApiKey) {
     try {
       models['openai'] = {
-        'Text embedding 3 small': new OpenAIEmbeddings({
-          openAIApiKey,
-          modelName: 'text-embedding-3-small',
-        }),
         'Text embedding 3 large': new OpenAIEmbeddings({
           openAIApiKey,
           modelName: 'text-embedding-3-large',
         }),
+        'Text embedding 3 small': new OpenAIEmbeddings({
+          openAIApiKey,
+          modelName: 'text-embedding-3-small',
+        }),
+        
       };
     } catch (err) {
       logger.error(`Error loading OpenAI embeddings: ${err}`);

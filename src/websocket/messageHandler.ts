@@ -3,7 +3,7 @@ import { BaseMessage, AIMessage, HumanMessage } from '@langchain/core/messages';
 import handleWebSearch from '../agents/webSearchAgent';
 import handleAcademicSearch from '../agents/academicSearchAgent';
 import handleWritingAssistant from '../agents/writingAssistant';
-import handleWolframAlphaSearch from '../agents/wolframAlphaSearchAgent';
+// import handleWolframAlphaSearch from '../agents/wolframAlphaSearchAgent';
 import handleYoutubeSearch from '../agents/youtubeSearchAgent';
 import handleRedditSearch from '../agents/redditSearchAgent';
 import type { BaseChatModel } from '@langchain/core/language_models/chat_models';
@@ -22,7 +22,7 @@ const searchHandlers = {
   webSearch: handleWebSearch,
   academicSearch: handleAcademicSearch,
   writingAssistant: handleWritingAssistant,
-  wolframAlphaSearch: handleWolframAlphaSearch,
+  // wolframAlphaSearch: handleWolframAlphaSearch,
   youtubeSearch: handleYoutubeSearch,
   redditSearch: handleRedditSearch,
 };

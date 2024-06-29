@@ -8,7 +8,7 @@ const messages_1 = require("@langchain/core/messages");
 const webSearchAgent_1 = __importDefault(require("../agents/webSearchAgent"));
 const academicSearchAgent_1 = __importDefault(require("../agents/academicSearchAgent"));
 const writingAssistant_1 = __importDefault(require("../agents/writingAssistant"));
-const wolframAlphaSearchAgent_1 = __importDefault(require("../agents/wolframAlphaSearchAgent"));
+// const wolframAlphaSearchAgent_1 = __importDefault(require("../agents/wolframAlphaSearchAgent"));
 const youtubeSearchAgent_1 = __importDefault(require("../agents/youtubeSearchAgent"));
 const redditSearchAgent_1 = __importDefault(require("../agents/redditSearchAgent"));
 const logger_1 = __importDefault(require("../utils/logger"));
@@ -16,7 +16,7 @@ const searchHandlers = {
     webSearch: webSearchAgent_1.default,
     academicSearch: academicSearchAgent_1.default,
     writingAssistant: writingAssistant_1.default,
-    wolframAlphaSearch: wolframAlphaSearchAgent_1.default,
+    // wolframAlphaSearch: wolframAlphaSearchAgent_1.default,
     youtubeSearch: youtubeSearchAgent_1.default,
     redditSearch: redditSearchAgent_1.default,
 };
